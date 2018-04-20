@@ -15,6 +15,6 @@ use cmf\controller\HomeBaseController;
 class AboutController extends HomeBaseController {
 	public function index() {
 
-		return $this->fetch(':index');
+		return $this->fetch(':about');
 	}
 }

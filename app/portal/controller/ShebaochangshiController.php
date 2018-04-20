@@ -15,6 +15,6 @@ use cmf\controller\HomeBaseController;
 class JiaoshebaoController extends HomeBaseController {
 	public function index() {
 
-		return $this->fetch(':index');
+		return $this->fetch(':shebaochangshi');
 	}
 }

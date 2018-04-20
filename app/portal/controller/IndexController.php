@@ -14,7 +14,8 @@ use cmf\controller\HomeBaseController;
 
 class IndexController extends HomeBaseController {
 	public function index() {
-
+		$this->assign("hello", "Hello ThinkCMF Portal!");
+		// return $this->display($content);
 		return $this->fetch(':index');
 	}
 }
