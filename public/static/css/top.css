@@ -1,0 +1,95 @@
+﻿ * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul, li {
+        list-style: none;
+    }
+
+    .check_class {
+        width: 200px;
+        position: absolute;
+        right: -50px;
+        top: 0px;
+        z-index: 1;
+    }
+
+    .theme-popover-mask {
+        z-index: 9998;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        display: none;
+    }
+
+    .theme-popbod {
+        z-index: 9999;
+        position: fixed;
+        display: none;
+        top: 50%;
+        left: 50%;
+        width: 1002px;
+        height: 375px;
+        margin: -187px 0 0 -501px;
+        border-radius: 15px;
+        border: solid 1px #666;
+        background-color: #fff;
+        /* display: none; */
+        box-shadow: 0 0 15px #666;
+    }
+
+    .theme-poptit .close {
+        float: right;
+        color: #999;
+        margin: 8px 10px 10px;
+        font: bold 25px/25px simsun;
+        text-shadow: 0 1px 0 #ddd;
+    }
+
+    .qcontainer {
+        -webkit-perspective: 400px;
+        -moz-perspective: 400px;
+        float: left;
+        width: 180px;
+        cursor: pointer;
+        margin: 60px 5px 20px;
+    }
+
+    .film {
+        width: 100%;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition: 1.5s;
+        -moz-transform-style: preserve-3d;
+        -moz-transition: 1.5s;
+    }
+
+    .qcontainer:hover .film {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+    }
+
+    .face {
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+    }
+
+        .face h3 {
+            color: white;
+            text-align: center;
+        }
+
+    .back {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        background: -webkit-gradient(linear,left top,left bottom,from(#fdbb5a),to(#db5726));
+        background: -moz-linear-gradient(top,#fdbb5a,#db5726);
+        width: 180px;
+        height: 245px;
+    }

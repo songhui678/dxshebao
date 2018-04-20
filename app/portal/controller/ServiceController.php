@@ -14,7 +14,7 @@ use cmf\controller\HomeBaseController;
 
 class ServiceController extends HomeBaseController {
 	public function index() {
-
-		return $this->fetch(':service');
+		var_dump(123);exit;
+		return $this->fetch('/service');
 	}
 }
