@@ -1,34 +1,326 @@
-<br>
-<!-- Footer ================================================== -->
-<hr>
-<div id="footer">
-    <hook name="footer_start"/>
-    <div class="links">
-        <links>
-            <a href="{$vo.url|default=''}" target="{$vo.target|default=''}">{$vo.name|default=''}</a>&nbsp;
-        </links>
+<div class="footer_Box">
+    <div class="rrb1_footer">
+        <table bordercolor="#606060" width="100%" bgcolor="#606060" cellspacing="0" cellpadding="0" style="padding:15px;padding-right:0px;" border="0">
+            <tr>
+                <td style="font-size:16px" width="140">产品服务</td>
+                <td style="font-size:16px" width="140">帮助中心</td>
+                <td style="font-size:16px" width="140">新闻资讯</td>
+                <td style="font-size:16px" width="140">关于我们</td>
+                <!--<td rowspan="4" align="center" width="100"><img src="/images/www/ziliao/webchat.jpg" width="92" height="92" alt=”人人保微信公众号” /></td>-->
+                <td rowspan="4" align="center" width="100"><img src="/images/www/ziliao/ios.jpg" width="92" height="92" alt=”人人保APP苹果版” /></td>
+                <td rowspan="4" align="center" width="120"><img src="/images/www/ziliao/android.jpg" width="92" height="92" alt=”人人保APP安卓版” /></td>
+
+                <td rowspan="4" align="left" width="200">
+                    <img src="../../images/www/ziliao/zixunbg.png" />
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/jiaoshebao">代缴社保</a></td>
+                <td><a href="https://www.rrb365.com/news/20161130045119.html">参保流程</a></td>
+                <td><a href="/shebaochangshi">公司资讯</a></td>
+                <td><a href="/about">关于我们</a></td>
+            </tr>
+            <tr>
+                <td><a href="/jiaogongjijin">缴公积金</a></td>
+                <td><a href="https://www.rrb365.com/news/20161130050504.html">停缴流程</a></td>
+                <!--<td><a href="/shebaochangshi">行业聚焦</a></td>-->
+                <td><a href="https://www.rrb365.com/shebaochangshi/6">政策资讯</a></td>
+                <td><a href="/about/dashiji">公司大事记</a></td>
+            </tr>
+            <tr>
+                <td><a href="javascript:;" id="zhengcezixun">政策咨询</a></td>
+                <td><a href="#">补差流程</a></td>
+                <td><a href="https://www.rrb365.com/shebaochangshi/5">社保常识</a></td>
+                <td><a href="/about/jiameng">地区合作</a></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><a href="/productLine/index.aspx">产品动态</a></td>
+                <td><a href="/about/law">法律声明</a></td>
+                <!--<td align="center">微信公众号</td>-->
+                <td align="center">IOS版</td>
+                <td align="center">Android版</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="8" style="font-size: 16px;cursor:pointer;" class="Friendship_link">
+                    友情链接  T@manpaer.com:
+                    <div style="width: 968px;">
+                        <div class="shouye_text1" style="color: #ababab; display: none;">
+                            <p style="line-height:25px;" id="FriendshipListDiv">
+                                <hr color="#FFFFFF" style="display:block;width:970px;margin-top:10px;margin-bottom:10px;">
+<a href="http://www.baiduhl.com" target="_blank"   >百度网址大全</a>
+
+
+
+                            </p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
 
     </div>
-    <p>
-        Made by <a href="http://www.thinkcmf.com" target="_blank">ThinkCMF</a>
-        Code licensed under the
-        <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow" target="_blank">Apache License v2.0</a>.
-        <br/>
-        Based on
-        <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>.
-        Icons from
-        <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a>
-        <br>
-        备案号:
-        <notempty name="site_info.site_icp">
-            <a href="http://www.miitbeian.gov.cn/" target="_blank">{$site_info.site_icp}</a>
-            <else/>
-            请在后台设置"网站信息"设置"备案信息"
-        </notempty>
+    <div class="footer">
+
+        <p>copyright&copy1999-<span id="MyYear"></span>  北京市鼎信恒通人力资源有限公司  版权所有  {$site_info.site_icp}</p>
+        <script>
+            //自动获取当前年份，作为结尾年份
+            var myDate = new Date();
+            var date = document.getElementById("MyYear");
+            date.innerHTML = myDate.getFullYear();
+        </script>
+ 
+    </div>
+</div>
+ 
+<!--侧栏-->
+<ul class="cebian_Box" style="z-index:1000;">
+    <li>
+        <a href="javascript:;"><img src="/images/www/simal_logo_05.png"></a>
+        <ul class="cebian_Image1">
+            <input type="hidden" value="" id="hidDjsTime" />
+            <!--时间-->
+            <div class="rrb1_time">
+                <div class="rrb1_time1">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="45" colspan="2" align="center" bgcolor="#969696"><strong style=" font-size:24px; color:white" id="monthHzName"></strong></td>
+                        </tr>
+                        <tr>
+                            <td height="40" colspan="2" align="center" style="font-size:20px"><strong>社保办理倒计时</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="76" rowspan="2" align="right" style=" font-size:40px; color:#ff8400"><strong id="djsT">-</strong></td>
+                            <td style="font-size:14px; color:#646464" id="djsTime">0时0分0秒</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="font-size:20px;color:#ff8400">天</strong></td>
+                        </tr>
+                        <tr>
+                            <td height="10" colspan="2"><hr></td>
+                        </tr>
+                        <tr>
+                            <td height="40" colspan="2">&nbsp;&nbsp;<strong>公告：</strong><a id="ggtitle" href="#" target="_blank">asdfasdf</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--end-->
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;"><img src="/images/www/simal_logo_08.png"></a>
+        <ul class="cebian_Image1">
+            <!--微信-->
+            <div class="rrb1_weixin">
+                <div class="rrb1_weixin1">
+
+                    <img src="/images/www/ziliao/dianhua.png" style="width:200px; height:87px; border:none;">
+                </div>
+            </div>
+            <!--ENd-->
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" style=" background-color:#FFF"><img src="/images/www/simal_logo_17.png" style="border-bottom: 1px solid #e6e6e6; "></a>
+        <ul class="cebian_Image1">
+            <!-- 计算器结果页添加-->
+            <div class="rrb1_jsbox">
+                <div class="rrb1_jisuanqi">
+                    <div class="jsq" style="background-color:#FFF; width:1026px; height:578px;">
+                        <div class="jsq_L" style="background-color:#FFF">
+                            <div class="biaoti">社保计算器</div>
+                            <div class="jsq_list">
+                                <p class="jsq_city">选择城市</p>
+                                <input class="select_box" value="选择城市" id="txtCity" readonly="readonly" type="text" style="margin-left: 111px; cursor: pointer;" />
+                                <!--选择城市-->
+                                <div class="select_city">
+                                    <div class="select_city_tab">
+                                        <div class="current_1" id="tag_province" style="width:143px;cursor:pointer;"><a href="#" type="p">省份</a></div>
+                                        <div class="current_2" id="tag_city" style="width:143px;cursor:pointer"><a href="#" type="c">城市</a></div>
+                                    </div>
+                                    <div class="select_city_con_wrap">
+                                        <div class="select_city_con_actived" type="p">
+                                            <dl>
+                                                <dt>A-Z</dt>
+                                                <dd style="width: 222px;" id="provincelist">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="select_city_con_actived1 " type="c" style="width:289px; display:none">
+                                            <dl>
+                                                <dt>A-Z</dt>
+                                                <dd style="width: 222px;" id="citylist">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end-->
+                            </div>
+                            <div class="jsq_list">
+                                <p class="jsq_city">户籍性质</p>
+                                <input type="hidden" id="hidsbmin" />
+                                <input type="hidden" id="hidsbmax" />
+                                <input type="hidden" id="hidgjjmin" />
+                                <input type="hidden" id="hidgjjmax" />
+                                <input type="text" id="txtHkxz" class="household" readonly="readonly" value="请选择" style="cursor: pointer;">
+                                <ul class="select_household" id="ulHkxz"></ul>
+                            </div>
+                            <div class="jsq_list">
+                                <p class="jsq_city">社保基数</p>
+                                <input class="number" id="txtSbBaseNum">
+                            </div>
+
+                            <!--是否缴纳-->
+                            <div class="jsq_list2">
+                                <div class="panduan">
+                                    <div class="panduan_textck" id="divIsGjj">是否缴纳公积金</div>
+                                    <div class="status-defualt" id="div_baserange"></div>
+                                </div>
+                            </div>
+                            <div class="jsq_list3">
+                                <div>
+                                    <p class="jsq_gongjijin">公积金基数</p>
+                                    <input class="number" id="txtGjjBaseNum" />
+                                    <input type="hidden" id="hidHousingId" />
+                                    <div class="fanwei" id="div_gjjbaserange"></div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div style="margin-top:20px;">
+                                    <p class="jsq_city">缴纳比例</p>
+                                    <input class="geren" value="" readonly="readonly" id="txtHouseP">
+                                    <input class="gongsi" value="" readonly="readonly" id="txtHouseE">
+                                    <div class="jsq_listb" style="display:none;">
+                                        <div class="bilifanwei1">比例范围12.00到12.00</div>
+                                        <div class="bilifanwei2">比例范围12.00到12.00</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <!--end-->
+                            <div class="jsq_list_jisuan">
+                                <input type="image" src="/images/www/jisuan.png" class="jisuan">
+                                <input type="image" src="/images/www/chongzhi.png" class="chongzhi">
+                            </div>
+                        </div>
+                        <div class="jsq_R" style="background-color:#FFF">
+                            <div class="biaoti2">社保与公积金缴费明细</div>
+                            <div id="shebaoDetail">
+                                <table cellpadding="0" cellspacing="0">
+                                    <tr class="tr1" style="height:35px;">
+                                        <td class="td1" style="color:#323232" rowspan="2">缴纳项目</td>
+                                        <td class="td2" style="color:#323232" rowspan="2">社保基数</td>
+                                        <td class="td3" style="color:#323232" colspan="2">个人缴纳</td>
+                                        <td class="td4" style="color:#323232" colspan="2">企业缴纳</td>
+                                    </tr>
+                                    <tr class="tr2" style="height:35px;">
+                                        <td style="color:#323232">缴纳比例</td>
+                                        <td style="color:#323232">缴纳金额（元）</td>
+                                        <td style="color:#323232">缴纳比例</td>
+                                        <td style="color:#323232">缴纳金额（元）</td>
+                                    </tr>
+                                    <tr><td colspan="6">&nbsp;</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--ENd-->
+        </ul>
+    </li>
+    <li style="background: #fff; cursor: pointer;">
+        <a id="nb_invite_ok" title="咨询客服"><img src="/images/www/ZXGT_icon.png" style="border-bottom:1px solid #e6e6e6;display:block;"></a>
+        <ul class="cebian_Image1" id="zixun_img" style="right:121px;top:-193px;">
+            <div class="rrb1_weixin">
+                <div class="rrb1_weixin1">
+
+                    <img src="/images/www/ziliao/zixunimg.png" style="width:300px; height:300px; border:none;">
+                </div>
+            </div>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" id="backtop"><img src="/images/www/end_03.png" style="border-bottom:1px solid #e6e6e6"></a>
+        <ul class="cebian_Image1"></ul>
+    </li>
+</ul>
+<script src="/js/autocomplete/socialsecuritycalculator.js"></script>
+<!-- 用户统计代码 gzz -->
+<script type="text/javascript" src="http://db.rrb365.com/hm-rr.js"></script>
+<script type="text/javascript" src="/js/autocomplete/footer.js"></script>
+<script src="/js/o_code.js" type="text/javascript"></script>
+ 
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#scrollDiv").Scroll({ line: 1, speed: 500, timer: 2000 });
+        LoadListInfo();
+        //公积金费用移动小三角跟着相应发生变化
+        $('.feiyong_yuan').mouseover(function () {
+            var index11 = $('.feiyong_yuan').index(this);
+            if (index11 == 0) {
+                $('.jiamu-sanjiao').stop().animate({ left: '+85px' }, 200);
+            } else if (index11 == 1) {
+                $('.jiamu-sanjiao').stop().animate({ left: '+330px' }, 200);
+            } else if (index11 == 2) {
+                $('.jiamu-sanjiao').stop().animate({ left: '+565px' }, 200);
+            } else {
+                $('.jiamu-sanjiao').stop().animate({ left: '+810px' }, 200);
+            }
+        })
+
+    });
+
+    function loadKhjz(page) {
+        $.ajax({
+            url: "/ajax/SocialList.ashx",
+            type: "get",
+            dataType: "html",
+            data: { PageSize: 4, CurrentPage: page, SbAndGjj: "社保" },
+            beforeSend: function (data) {
+            },
+            success: function (data) {
+                var dt = data.split("###");
+                $("#totalPage").text(dt[1]);
+                $("#currentPage").text(page);
+                $("#khjz").html(dt[0]);
+                hkjz();
+            }
+        });
+    }
+
+    function LoadListInfo() {
+        $.ajax({
+            url: "/ajax/getPositionHandler.ashx",
+            type: "Post",
+            dataType: "html",
+            data: { action: "getIDList", pjid: "1" },
+            beforeSend: function (data) {
+            },
+            success: function (data) {
+                $("#InsureDadvantageList").html(data);
+            }
+        });
+    }
 
 
-    </p>
-</div>
-<div id="backtotop">
-    <i class="fa fa-arrow-circle-up"></i>
-</div>
+    function hkjz() {
+        $(".jianzheng").hover(function () {
+
+            $(this).children(".jianzheng_tishi").show();
+        }, function () {
+            $(this).children(".jianzheng_tishi").hide();
+        })
+        $(".pingjia_maxBox").hover(function () {
+
+            $(this).children(".jianzheng_tishi1").show();
+        }, function () {
+            $(this).children(".jianzheng_tishi1").hide();
+        })
+    }
+</script>

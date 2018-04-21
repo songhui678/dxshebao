@@ -12,7 +12,7 @@ namespace app\portal\controller;
 
 use cmf\controller\HomeBaseController;
 
-class JiaoshebaoController extends HomeBaseController {
+class ShebaochangshiController extends HomeBaseController {
 	public function index() {
 
 		return $this->fetch(':shebaochangshi');

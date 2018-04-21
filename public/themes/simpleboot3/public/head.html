@@ -1,58 +1,395 @@
-<taglib name="app\portal\taglib\Portal"/>
-<include file="public@function"/>
-<meta name="author" content="ThinkCMF">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<!-- Set render engine for 360 browser -->
-<meta name="renderer" content="webkit">
-
-<!-- No Baidu Siteapp-->
-<meta http-equiv="Cache-Control" content="no-siteapp"/>
-
-<!-- HTML5 shim for IE8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link href="__TMPL__/public/assets/css/css.css" rel="stylesheet" />
+<link href="__TMPL__/public/assets/css/common.css" rel="stylesheet" />
+<script src="__TMPL__/public/assets/js/jquery/jquery-1.4.4.min.js"></script>
+<script src="__TMPL__/public/assets/js/autocomplete/common.js"></script>
+<script src="__TMPL__/public/assets/js/autocomplete/gundong.js"></script>
+<script src="__TMPL__/public/assets/js/autocomplete/Customer.js"></script>
+<title>
+    缴社保_社保代理_社保代缴_公司社保代缴_企业五险一金代办-人人保
+</title>
+<script src="__TMPL__/public/assets/js/requestLog.js"></script>
+    <script>
+        function qiehuan(num) {
+            for (var id = 0; id <= 3; id++) {
+                if (id == num) {
+                    document.getElementById("qh_con" + id).style.display = "block";
+                    document.getElementById("mynav" + id).className = "feiyong_yuan feiyong_yuan1";
+                    document.getElementById("Money" + id).className = "feiyong_fang feiyong_fang1";
+                }
+                else {
+                    document.getElementById("qh_con" + id).style.display = "none";
+                    document.getElementById("mynav" + id).className = "feiyong_yuan";
+                    document.getElementById("Money" + id).className = "feiyong_fang";
+                }
+            }
+        }
+    </script>
+<meta name="description" content="人人保是第一家24小时在线社保代缴平台,上市企业,服务于世界500强客户,16年专注为中小微企业,自由职业者及个体工商户提供社保网上自助代缴服务,包括全国社保代理,社保代缴,社保补缴,代缴公积金,社保挂靠,社保转移,五险一金代办等,上人人保,彻底拒绝社保中断!参保热线:400-862-0588" /><meta name="keywords" content="个人社保代缴,公司社保代理,社保补缴,社保挂靠,代办社保" /></head>
+<body>
+    <!--[if IE 6]>
+    <script src="/js/autocomplete/DD_belatedPNG.js"></script>
+    <script type="text/javascript">
+    DD_belatedPNG.fix(' .daifa_qiye,.daifa_L,.daifa_L1,.rrb1_header_R1,.rrb1_header_R2,.rrb1_header_R3,.logo,.rrb1_yuan2');
+    </script>
 <![endif]-->
-<link rel="icon" href="__TMPL__/public/assets/images/favicon.png" type="image/png">
-<link rel="shortcut icon" href="__TMPL__/public/assets/images/favicon.png" type="image/png">
-<link href="__TMPL__/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
-<link href="__TMPL__/public/assets/simpleboot3/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
-      type="text/css">
-<!--[if IE 7]>
-<link rel="stylesheet" href="__TMPL__/public/assets/simpleboot3/font-awesome/4.4.0/css/font-awesome-ie7.min.css">
-<![endif]-->
-<link href="__TMPL__/public/assets/css/style.css" rel="stylesheet">
-<style>
-    /*html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(1);}*/
-    #backtotop {
-        position: fixed;
-        bottom: 50px;
-        right: 20px;
-        display: none;
-        cursor: pointer;
-        font-size: 50px;
-        z-index: 9999;
-    }
+<link href="__TMPL__/public/assets/css/top.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link href="__TMPL__/public/assets/css/font.css" rel="stylesheet" />
+<link href="__TMPL__/public/assets/css/index.css" rel="stylesheet" />
+<script src="__TMPL__/public/assets/js/functions.js"></script>
+<script src="__TMPL__/public/assets/js/index.js" content="charset=utf-8"></script>
+<div id="divTopZw"></div>
+<script src="__TMPL__/public/assets/js/autocomplete/enterprisecustomized.js"></script>
+<!--操作指引start-->
+<div class="theme-popbod">
+    <div class="theme-poptit">
+        <a href="javascript:;" title="关闭" class="close">×</a>
+    </div>
+    <div class="qcontainer" style="margin-left:30px;">
+        <div class="film">
+            <div class="face front"><img src="__TMPL__/public/assets/images/img0.png" width="180" alt="人人保登录"></div>
+            <div class="face back">
+                <h3>登录/注册</h3>
+                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
+            </div>
+        </div>
+    </div>
+    <div class="qcontainer">
+        <div class="film">
+            <div class="face front"><img src="__TMPL__/public/assets/images/img1.jpg" width="180" alt="代缴社保"></div>
+            <div class="face back">
+                <h3>缴社保</h3>
+                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
+            </div>
+        </div>
+    </div>
+    <div class="qcontainer">
+        <div class="film">
+            <div class="face front"><img src="__TMPL__/public/assets/images/img2.jpg" width="180" alt="代缴公积金"></div>
+            <div class="face back">
+                <h3>缴公积金</h3>
+                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
+            </div>
+        </div>
+    </div>
+    <div class="qcontainer">
+        <div class="film">
+            <div class="face front"><img src="__TMPL__/public/assets/images/img3.jpg" width="180"></div>
+            <div class="face back">
+                <h3>代发工资</h3>
+                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
+            </div>
+        </div>
+    </div>
+    <div class="qcontainer" style="margin-top:18px;">
+        <div class="film">
+            <div class="face front"><img src="/zhuanti/teaching/images/img4.jpg" width="180" alt="代发工资"></div>
+            <div class="face back">
+                <h3>提前停缴</h3>
+                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box" style="display:none;">
+    <img class="guanbi" src="__TMPL__/public/assets/images/guanbi.png" alt="Alternate Text" />
+    <div id="videoContent">
+    </div>
+    <div class="contor1">
+        <div class="play"></div>
+        <div class="progress">
+            <div class="mask"></div>
+            <div class="progress-bar"></div>
+            <div class="progress-contor1"></div>
+        </div>
+        <div class="time">
+            0:0
+        </div>
+        <div style="color:white;display:inline-block;margin-top:10px;margin-left:10px;float:left;">播放速率：</div>
+        <div class="one" data-role="1">1</div>
+        <div class="one" data-role="2" style="display:none;">2</div>
+        <div class="one" data-role="3" style="display:none;">3</div>
 
-    #backtotop:hover {
-        color: #333
-    }
+        <div class="full">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div class="volume-box">
+            <div class="volume-bar"></div>
+            <div class="volume-control"></div>
+        </div>
+        <div class="trumpt" data-icon="sound"></div>
+    </div>
+</div>
+<div class="theme-popover-mask"></div>
 
-    #main-menu-user li.user {
-        display: none
-    }
-</style>
+
+<div class="top_maxBox">
+
+    <div class="rrb1_header">
+        <div class="rrb1_headerBox">
+            <p class="rrb1_header_L">客服电话：010-60337409</p>
+
+            <!--sxx-b0531-->
+            <script src="__TMPL__/public/assets/js/jquery/city.js"></script>
+            <script type="text/javascript" src="https://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+            <script type="text/javascript">
+                var myprovince = remote_ip_info['province'];
+                var mycity = remote_ip_info['city']
+                var province = remote_ip_info['province'];
+
+
+            </script>
+
+            <div class="rrb_ditu" style="display:none">
+                <img src="__TMPL__/public/assets/images/www/dingwei.jpg" alt="Alternate Text" style="padding-top:8px;" />
+                <span class="rrb_ditucity" id="loadCity">
+                    <!--<script>document.write(mycity);</script>-->
+                </span>
+                <script type="text/javascript">
+
+                    $(function () {
+                        var city = "北京";
+                        var cookie_val = getCookie("MRRB_PCCOOKIE");
+                        if (cookie_val != null && cookie_val != "") {
+                            var strs = cookie_val.split('&');
+                            var citys = strs[1].split('=');
+                            city = citys[1];
+                        }
+                        $("#loadCity").text(city);
+                    })
+
+                </script>
+                <img src="__TMPL__/public/assets/images/www/jiantou.jpg" alt="Alternate Text" />
+
+                <div class="map_Box" style="display:none;">
+                    <div style="background:red;width:420px;height:400px;position:absolute;left:50px;z-index:-2;opacity:0;"></div>
+                    <div class="shortcut">
+                        <form id="cityChange" method="post" action="">
+                            <span>按省份选择：</span>
+                            <div class="shortcut-select shortcut-select-p">
+                                <div class="ss-value" id="dP"><em id="defualtP"></em><i class="triangle"></i></div>
+                                <div class="ss-dropdown" id="getProvince" style="display: none;">
+                                </div>
+                            </div>
+                            <div class="shortcut-select shortcut-select-city">
+                                <div class="ss-value" id="dc"><em class="chengshi" id="defualtC">万州</em><i class="triangle"></i></div>
+                                <div class="ss-dropdown" id="getCity" style="display: none;">
+
+                                </div>
+                            </div>
+                            <input type="hidden" name="index_city" class="index_city" value="wanzhou">
+                            <input type="hidden" name="act" class="act" value="get_post_ci.0ty">
+                            <input type="button" onclick="btnSaveInfo()" value="确 定" class="button">
+                        </form>
+                    </div>
+                    <div class="city">
+                        <span>常用城市：</span>
+                        <div class="hot_city" id="oftenCity">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rrb1_header_R">
+                <div class="top_denglu">
+                    <div class="rrb1_log1" id="loginInfo">
+                    </div>
+                </div>
+                <span id="loadInfo">
+                </span>
+ 
+                <div class="inpbtn"><input class="rrb1_header_R4" type="button"></div>
+                <ul class="popup_window">
+                    <li class="enterprise_custom">
+                        <ul>
+                            <li class="names">企业名称</li>
+                            <li class="contents"><input type="text" id="txtName"></li>
+                        </ul>
+                        <ul>
+                            <li class="names">联系人</li>
+                            <li class="contents"><input type="text" id="txtConPerson"></li>
+                        </ul>
+                        <ul>
+                            <li class="names">联系电话</li>
+                            <li class="contents"><input type="text" id="txtConPhone"></li>
+                        </ul>
+
+                        <ul>
+                            <li class="names">地区</li>
+                            <li class="contents" style="width:140px;border:none;">
+                                <select id="ddlEnProvince" style="width:140px;">
+                                    <option value="">请选择省份</option>
+                                </select>
+                            </li>
+                            <li class="contents" style="width: 140px; border: none;">
+                                <select id="ddlEnCity" style="width:140px;">
+                                    <option value="">请选择城市</option>
+                                </select>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li class="names">所属行业</li>
+                            <li class="contents" style=" border none;">
+                                <select id="txtIndustry"></select>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="names">企业规模</li>
+                            <li class="contents" style=" border none;">
+                                <select id="txtScale"></select>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="names" style="margin-top:35px;">您的需求</li>
+                            <li class="contents" style=" border none;"><textarea id="txtXuqiu" style="width:290px;height:100px;"></textarea></li>
+                        </ul>
+                        <div id="li_msg" style="color:#ff0000; padding-left:110px; font-size:12px;"></div>
+                        <ul class="subbtn">
+                            <input type="button" id="btnSubmitsEn">
+                        </ul>
+                        <ul class="closebtn">
+                            <input type="button">
+                        </ul>
+                    </li>
+                </ul>
+ 
+
+            </div>
+        </div>
+        <!--sxx-e0531-->
+
+        <div class="clear"></div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            function scroll(fn) {
+
+                var beforeScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+                fn = fn || function () { };
+                if (window.addEventListener) {
+                    window.addEventListener("scroll", function () {
+                        var afterScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+                        delta = afterScrollTop - beforeScrollTop;
+                        if (delta === 0) return false;
+                        fn(delta > 0 ? "down" : "up");
+                        beforeScrollTop = afterScrollTop;
+                    }, false);
+                }
+            }
+        })
+
+    </script>
+    <!--教程-->
+
+    <script type="text/javascript">
+        $(function () {
+
+            $('.click_btna').click(function () {
+                $('.theme-popover-mask').fadeIn(100);
+                $('.theme-popbod').slideDown(200);
+            });
+            $('.theme-poptit .close').click(function () {
+                $('.theme-popover-mask').fadeOut(100);
+                $('.theme-popbod').slideUp(200);
+                $(".click_btna").show();
+            })
+            $(".qcontainer").click(function () {
+                $('.theme-popbod').slideUp(200);
+                $('.box').slideDown(400);
+            })
+            $('.guanbi').click(function () {
+                //console.log($('.Video').empty())
+                $('#videoContent').empty()
+                $('.theme-popbod').slideDown(200);
+                $('.box').slideUp(200);
+
+            })
+        });
+
+        var close = function () {
+
+            $(document.body).css({
+                "overflow-x": "hidden",
+                "overflow-y": "hidden"
+            });
+        }
+        var open = function () {
+            $(document.body).css({
+                "overflow-x": "auto",
+                "overflow-y": "auto"
+            });
+        }
+
+    </script>
+
+    <div class="rrb1_nav">
+    <!--<div class="check_class">
+        <a class="click_btna">
+            <img src="/zhuanti/teaching/images/ct.gif" />
+        </a>
+    </div>-->
+    <a href="/"><img src="__TMPL__/public/assets/images/www/logo_03.png" id="toplogo" class="logo"></a>
+    <!--<div class="rrb1_map">
+        <p><span id="span_city"></span></p>
+    </div>-->
+    <ul class="Nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="/portal/jiaoshebao">缴社保</a></li>
+        <li><a href="/portal/jiaogongjijin">缴公积金</a></li>
+        <li><a href="/portal/shebaochangshi">社保常识</a></li>
+        <li><a href="/portal/about">关于我们</a></li>
+        <li><a href="/portal/service">企业服务</a></li>
+
+    </ul>
+    <!--<div class="rrb1_log" id="logInfo">-->
+</div>
 <script type="text/javascript">
-    //全局变量
-    var GV = {
-        ROOT: "__ROOT__/",
-        WEB_ROOT: "__WEB_ROOT__/",
-        JS_ROOT: "static/js/"
-    };
+        $(function () {
+            $.get("/ajax/LoginInfo.ashx", { dt: new Date().getTime() }, function (data) {
+                $("#logInfo").html(data);
+            });
+            $("#logInfo").hover(function () {
+                $(".rrb1_denglu").show();
+            }, function () {
+                $(".rrb1_denglu").hide();
+            });
+            loadMenuTop();
+        })
+        function loadMenuTop() {
+            var url = location.href.toString().toLocaleLowerCase();
+            if (url.indexOf("jiaoshebao") > 0) {
+                $(".Nav li").eq(1).css("border-bottom", "2px solid #094");
+            } else if (url.indexOf("jiaogongjijin") > 0) {
+                $(".Nav li").eq(2).css("border-bottom", "2px solid #094");
+            } else if (url.indexOf("shebaochangshi") > 0 || url.indexOf("news") > 0) {
+                $(".Nav li").eq(3).css("border-bottom", "2px solid #094");
+            } else if (url.indexOf("about") > 0) {
+                $(".Nav li").eq(4).css("border-bottom", "2px solid #094");
+            } else {
+                $(".Nav li").eq(0).css("border-bottom", "2px solid #094");
+            }
+        }
+        $('.Nav>li').mouseover(function () {
+            len = $(this).find('.xiala div').length;
+            $(this).find('.xiala').css({ 'height': (len * 36) + 'px' });
+            $(this).find('.xiala div').css({ 'height': '36px' });
+            $(this).find('.xiala div a').css({ 'display': 'block' });
+            $(this).find('.xiala div a').css({ 'height': '36px' });
+        });
+        $('.Nav>li').mouseout(function () {
+            $(this).find('.xiala').css({ 'height': '0' });
+            $(this).find('.xiala div').css({ 'height': '0' });
+            $(this).find('.xiala div a').css({ 'display': 'none' });
+            $(this).find('.xiala div a').css({ 'height': '0' });
+        });
 </script>
-<script src="__TMPL__/public/assets/js/jquery-1.10.2.min.js"></script>
-<script src="__TMPL__/public/assets/js/jquery-migrate-1.2.1.js"></script>
-<script src="__STATIC__/js/wind.js"></script>
-	
+<div class="clear"></div>
+<div>
+    
+</div>

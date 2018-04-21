@@ -1,0 +1,112 @@
+ 
+
+/*左右上下滚动图片样式*/
+.jkqRoll
+{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+.jkqRoll .RollTit
+{
+    position: absolute;
+    right: 45%;
+    bottom: 5px;
+    z-index: 1;
+}
+.jkqRoll .RollTit li
+{
+    float: left;
+    padding: 5px 10px;
+    background: #ccc;
+    border: #ccc 1px solid;
+    margin-right: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.jkqRoll .RollTit li.select
+{
+    background: #ff0000;
+    color: #fff;
+    border: #ff0000 1px solid;
+}
+.jkqRoll .RollCon
+{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/***左右箭头样式***/
+.jkqRoll .RollArrow
+{
+    width:1000px;
+    margin:0px auto;
+    z-index:1;
+    position:relative;
+}
+.jkqRoll .RollArrow .leftArrow
+{
+    position:absolute;
+    left:0px;
+    background:url(../images/arrow.png) 0 -74px;
+    width:40px;
+    height:74px;
+    top:40px;
+    cursor:pointer;
+}
+.jkqRoll .RollArrow .rightArrow
+{
+    position:absolute;
+    right:0px;
+    background:url(../images/arrow.png) 40px -74px;
+    width:40px;
+    height:74px;
+    top:40px;
+    cursor:pointer;
+}
+
+
+
+/**多张图片滚动样式**/
+.jkqRollMore
+{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+.jkqRollMore .RollTitMore
+{
+    position: absolute;
+    right: 45%;
+    bottom: 5px;
+    z-index: 1;
+}
+.jkqRollMore .RollTitMore li
+{
+    float: left;
+    padding: 0px 5px;
+    background: #ccc;
+    border: #ccc 1px solid;
+    margin-right: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.jkqRollMore .RollTitMore li.select
+{
+    background: #ff0000;
+    color: #fff;
+    border: #ff0000 1px solid;
+}
+.jkqRollMore .RollConMore
+{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.jkqRollMore .RollConMore li img
+{
+    width: 320px;
+    height: 480px;
+}
