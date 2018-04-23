@@ -4,7 +4,8 @@
     <title>{$page.post_title}</title>
     <meta name="keywords" content="{$page.post_keywords}"/>
     <meta name="description" content="{$page.post_excerpt}">
-    <include file="public@head"/>
+    <taglib name="app\portal\taglib\Portal"/>
+<include file="public@function"/>
     <style>
         #article_content img {
             height: auto !important;
@@ -50,6 +51,7 @@
                         <ul class="list-unstyled">
                             <portal:articles limit="5" order="post.post_hits DESC"
                                              categoryIds="$widget.vars.hottest_articles_category_id">
+                                
                                 <php>$top=$key<3?"top3":"";</php>
                                 <li class="{$top}">
                                     <i>{$key+1}</i>

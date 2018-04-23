@@ -1,4 +1,5 @@
 <include file="public@head"/>
+<taglib name="app\portal\taglib\Portal"/>
 <php>
     $top_slide_id=empty($theme_vars['top_slide'])?1:$theme_vars['top_slide'];
 </php>
@@ -10,8 +11,8 @@
         <p class="Seat">当前位置：{$site_info.site_name}>>关于我们</p>
         <div class="ddgl_Left">
             <div class="about_nav">
-    <a class="activecolor " href="/about?type=0">关于我们</a>
-    <a class="activecolor1" href="/about/contact?type=1">联系我们</a>
+    <a class="activecolor " href="{:cmf_url('/portal/about/index/id/1')}">关于我们</a>
+    <a class="activecolor1" href="{:cmf_url('/portal/about/index/id/2')}">联系我们</a>
 </div>
 
 <script type="text/javascript">
@@ -53,8 +54,8 @@
         </div>
         <div class="ddgl_R">
             <div class="about_R">
-    <h1 class="about_title">关于我们</h1>
-    <p>曼帕尔人力资源（北京）有限公司是以人人保为网路平台为个人在家，异地办理社保服务。</p> 
+    <h1 class="about_title">{$page.post_title|default=''}</h1>
+    {$page.post_content|default=''} 
 </div>
         </div>
 

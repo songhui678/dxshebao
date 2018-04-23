@@ -10,11 +10,25 @@
 // +----------------------------------------------------------------------
 namespace app\portal\controller;
 
+use app\portal\service\PostService;
 use cmf\controller\HomeBaseController;
 
 class AboutController extends HomeBaseController {
 	public function index() {
+		$postService = new PostService();
+		$pageId = $this->request->param('id', 1, 'intval');
 
+		$page = $postService->publishedPage($pageId);
+
+		if (empty($page)) {
+			abort(404, ' 页面不存在!');
+		}
+
+		$this->assign('page', $page);
+
+		// $more = $page['more'];
+
+		// $tplName = empty($more['template']) ? 'page' : $more['template'];
 		return $this->fetch(':about');
 	}
 }
