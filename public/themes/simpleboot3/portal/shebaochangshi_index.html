@@ -47,20 +47,7 @@
             <p class="Seat">当前位置：<a href="/">{$site_info.site_name}</a> >><a href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>$category['id']))}">{$category.name}</a>
             <hr color="#f1f1f1" style="margin-top: 10px">
             <div class="search_Box" id="searchList" data-value="48">
-            <php>
-                $where=[
-                'post.create_time'=>['egt',0]
-                ];
-                $page=[
-                    'list_rows'=>10,
-                    'next'=>'下一页',
-                    'prev'=>'上一页'
-                ];
-            </php>
-            <portal:articles item="article" where="$where" order="post.create_time DESC" page="$page"  
-                        relation="categories" 
-                        categoryIds="$category.id"        
-                        returnVarName="articles_data">
+            <foreach name="articles" item="article">
          
                 <div class="search_Box1">
                     <div class="search_top">
@@ -72,12 +59,12 @@
                         {$article.post_excerpt}
                     </p>
                 </div>
-            </portal:articles>
+            </foreach>
  
         </div>
         <div class="page_news">
             <!--共有 <span class="ui_txt_bold04">22</span> 条记录-->
-            <page/>
+            {$page|default=''}
         </div>
         </div>
     </div>
