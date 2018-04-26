@@ -18,9 +18,11 @@ class ShebaochangshiController extends HomeBaseController {
 		$id = $this->request->param('id', 0, 'intval');
 		$portalCategoryModel = new PortalCategoryModel();
 		if ($id == 0) {
+			$params = $this->request->param();
 			$category = $portalCategoryModel->where('id', 1)->where('status', 1)->find();
 			$postService = new PostService();
 			$data = $postService->publishedAll();
+			$data->appends($params);
 			$this->assign('articles', $data->items());
 			$this->assign('page', $data->render());
 			$this->assign('category', $category);
