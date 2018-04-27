@@ -10,10 +10,15 @@
 <div style="width: 1000px; margin: 0 auto; overflow: hidden">
 <div class="sbcs_L">
     <dl class="sbcs_dl">
-        <dt data-value="1">
-        <a  href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>$category['id']))}">{$category.name}
-        </a>
-        </dd>
+        <?php foreach ($categoryTree as $fuCate) {?>
+        <dt data-value="<?=$fuCate['id']?>" class="sbcs_Image">
+            <a href="javascript:;" style="color: white;"><?=$fuCate['name']?></a>
+        </dt>
+            <?php foreach ($fuCate['_child'] as  $erji) {?>
+            <dd data-value="<?=$erji['id']?>" parent-value="<?=$fuCate['id']?>" style="display: block;">
+                <a href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>$erji['id']))}" style="color: black;"><?=$erji['name']?></a>
+            </dd>
+        <?php }}?>    
     </dl>
 
     <script>
@@ -51,7 +56,7 @@
          
                 <div class="search_Box1">
                     <div class="search_top">
-                        <h4><a href="{:cmf_url('portal/Article/index',array('id'=>$article['id'],'cid'=>$category['id']))}" target="_blank">{$article.post_title}</a>
+                        <h4><a href="{:cmf_url('portal/shebaochangshi/article',array('id'=>$article['id']))}" target="_blank">{$article.post_title}</a>
                         </h4>
                         <p>{:date('Y-m-d',$article.published_time)}</p>
                     </div>

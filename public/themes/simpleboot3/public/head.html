@@ -49,51 +49,6 @@
     <div class="theme-poptit">
         <a href="javascript:;" title="关闭" class="close">×</a>
     </div>
-    <div class="qcontainer" style="margin-left:30px;">
-        <div class="film">
-            <div class="face front"><img src="__TMPL__/public/assets/images/img0.png" width="180" alt="人人保登录"></div>
-            <div class="face back">
-                <h3>登录/注册</h3>
-                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
-            </div>
-        </div>
-    </div>
-    <div class="qcontainer">
-        <div class="film">
-            <div class="face front"><img src="__TMPL__/public/assets/images/img1.jpg" width="180" alt="代缴社保"></div>
-            <div class="face back">
-                <h3>缴社保</h3>
-                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
-            </div>
-        </div>
-    </div>
-    <div class="qcontainer">
-        <div class="film">
-            <div class="face front"><img src="__TMPL__/public/assets/images/img2.jpg" width="180" alt="代缴公积金"></div>
-            <div class="face back">
-                <h3>缴公积金</h3>
-                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
-            </div>
-        </div>
-    </div>
-    <div class="qcontainer">
-        <div class="film">
-            <div class="face front"><img src="__TMPL__/public/assets/images/img3.jpg" width="180"></div>
-            <div class="face back">
-                <h3>代发工资</h3>
-                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
-            </div>
-        </div>
-    </div>
-    <div class="qcontainer" style="margin-top:18px;">
-        <div class="film">
-            <div class="face front"><img src="/zhuanti/teaching/images/img4.jpg" width="180" alt="代发工资"></div>
-            <div class="face back">
-                <h3>提前停缴</h3>
-                <img src="__TMPL__/public/assets/images/play.png" width="110" height="110" style="border-radius:50%;margin-top:50px;margin-left:35px;" />
-            </div>
-        </div>
-    </div>
 </div>
 <div class="box" style="display:none;">
     <img class="guanbi" src="__TMPL__/public/assets/images/guanbi.png" alt="Alternate Text" />
@@ -327,62 +282,7 @@
         }
 
     </script>
-
-    <div class="rrb1_nav">
-   
-    <a href="/"><img src="__TMPL__/public/assets/images/dxht_logo.jpg" id="toplogo" class="logo"></a>
-    <ul class="Nav">
-        <li><a href="/">首页</a></li>
-        <li><a href="/portal/jiaoshebao">缴社保</a></li>
-        <li><a href="/portal/jiaogongjijin">缴公积金</a></li>
-        <li><a href="/portal/shebaochangshi">社保常识</a></li>
-        <li><a href="/portal/about">关于我们</a></li>
-        <li><a href="/portal/service" style="position:relative;">企业服务<img class="gif_img" style="position:absolute; right:-25px; top:0;" src="__TMPL__/public/assets/images/hot02.gif"></a></li>
-
-    </ul>
-    <!--<div class="rrb1_log" id="logInfo">-->
-</div>
-<script type="text/javascript">
-        $(function () {
-            $.get("/ajax/LoginInfo.ashx", { dt: new Date().getTime() }, function (data) {
-                $("#logInfo").html(data);
-            });
-            $("#logInfo").hover(function () {
-                $(".rrb1_denglu").show();
-            }, function () {
-                $(".rrb1_denglu").hide();
-            });
-            loadMenuTop();
-        })
-        function loadMenuTop() {
-            var url = location.href.toString().toLocaleLowerCase();
-            if (url.indexOf("jiaoshebao") > 0) {
-                $(".Nav li").eq(1).css("border-bottom", "2px solid #094");
-            } else if (url.indexOf("jiaogongjijin") > 0) {
-                $(".Nav li").eq(2).css("border-bottom", "2px solid #094");
-            } else if (url.indexOf("shebaochangshi") > 0 || url.indexOf("news") > 0) {
-                $(".Nav li").eq(3).css("border-bottom", "2px solid #094");
-            } else if (url.indexOf("about") > 0) {
-                $(".Nav li").eq(4).css("border-bottom", "2px solid #094");
-            } else {
-                $(".Nav li").eq(0).css("border-bottom", "2px solid #094");
-            }
-        }
-        $('.Nav>li').mouseover(function () {
-            len = $(this).find('.xiala div').length;
-            $(this).find('.xiala').css({ 'height': (len * 36) + 'px' });
-            $(this).find('.xiala div').css({ 'height': '36px' });
-            $(this).find('.xiala div a').css({ 'display': 'block' });
-            $(this).find('.xiala div a').css({ 'height': '36px' });
-        });
-        $('.Nav>li').mouseout(function () {
-            $(this).find('.xiala').css({ 'height': '0' });
-            $(this).find('.xiala div').css({ 'height': '0' });
-            $(this).find('.xiala div a').css({ 'display': 'none' });
-            $(this).find('.xiala div a').css({ 'height': '0' });
-        });
-</script>
-<div class="clear"></div>
+   <include file="public@nav"/>
 <div>
     
 </div>

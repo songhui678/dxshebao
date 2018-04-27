@@ -202,4 +202,44 @@ class PortalCategoryModel extends Model {
 		}
 		return $sub;
 	}
+
+	/**
+	 * 生成分类 select树形结构
+	 * @param int $selectId 需要选中的分类 id
+	 * @return string
+	 */
+	public function categoryTree($selectId = 0) {
+		$where = ['delete_time' => 0];
+		if ($selectId != 0) {
+			$where = ['id' => $selectId];
+		}
+		$categories = $this->order("list_order ASC")->where($where)->select()->toArray();
+		$tree = $this->listToTree($categories);
+		return $tree;
+	}
+
+	public function listToTree($list, $pk = 'id', $pid = 'parent_id', $child = '_child', $root = 0) {
+		// 创建Tree
+		$tree = [];
+		if (is_array($list)) {
+			// 创建基于主键的数组引用
+			$refer = array();
+			foreach ($list as $key => $data) {
+				$refer[$data[$pk]] = &$list[$key];
+			}
+			foreach ($list as $key => $data) {
+				// 判断是否存在parent
+				$parentId = $data[$pid];
+				if ($root == $parentId) {
+					$tree[] = &$list[$key];
+				} else {
+					if (isset($refer[$parentId])) {
+						$parent = &$refer[$parentId];
+						$parent[$child][] = &$list[$key];
+					}
+				}
+			}
+		}
+		return $tree;
+	}
 }
