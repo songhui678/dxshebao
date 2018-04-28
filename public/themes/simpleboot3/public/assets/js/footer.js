@@ -32,33 +32,28 @@
     }, function () {
         //$(this).children(".cebian_Image1").hide();
     })
+ 
     $(".cebian_Box li").eq(0).hover(function () {
-        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon1.png")
-    }, function () {
-        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/simal_logo_05.png")
-        $(this).children(".cebian_Image1").hide();
-    })
-    $(".cebian_Box li").eq(1).hover(function () {
 
         $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon6.png")
     }, function () {
         $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/simal_logo_08.png")
         $(this).children(".cebian_Image1").hide();
     })
-    $(".cebian_Box li").eq(2).hover(function () {
+    $(".cebian_Box li").eq(1).hover(function () {
         $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon7.png");
     }, function () {
         $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/simal_logo_17.png");
         $(this).children(".cebian_Image1").hide();
     })
-    $(".cebian_Box li").eq(3).hover(function () {
-        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon3.png")
+    $(".cebian_Box li").eq(2).hover(function () {
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/ZXGT_icon_Green.png")
     }, function () {
-        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/simal_logo_16.png")
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/ZXGT_icon.png")
         $(this).children(".cebian_Image1").hide();
     })
  
-    $(".cebian_Box li").eq(5).hover(function () {
+    $(".cebian_Box li").eq(3).hover(function () {
         $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon2.png")
     }, function () {
         $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/end_03.png");
