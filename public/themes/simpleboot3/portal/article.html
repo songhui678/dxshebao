@@ -50,7 +50,7 @@
                     $hot_articles=[];
                 </php>
                 <ul class="sbcx_rm">
-                    <portal:articles limit="5" order="post.post_hits DESC">
+                    <portal:articles limit="8" order="post.post_hits DESC">
                     <li>
                         <a href="{:url('portal/shebaochangshi/article',array('id'=>$vo['id']))}" title="{$vo.post_title}" target="_blank">{$vo.post_title}</a>
                     </li>

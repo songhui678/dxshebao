@@ -1,4 +1,5 @@
 <include file="public@head"/>
+<link href="__TMPL__/public/assets/css/page.css" rel="stylesheet">
 <taglib name="app\portal\taglib\Portal"/>
 <php>
     $top_slide_id=empty($theme_vars['top_slide'])?1:$theme_vars['top_slide'];
@@ -67,10 +68,10 @@
             </foreach>
  
         </div>
-        <div class="page_news">
+        <ul class="pagination">
             <!--共有 <span class="ui_txt_bold04">22</span> 条记录-->
             {$page|default=''}
-        </div>
+        </ul>
         </div>
     </div>
     <!--侧边栏-->
