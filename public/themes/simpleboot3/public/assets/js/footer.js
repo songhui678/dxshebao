@@ -33,55 +33,44 @@
         //$(this).children(".cebian_Image1").hide();
     })
     $(".cebian_Box li").eq(0).hover(function () {
-        $(this).children().children("img").attr("src", "/images/www/icon (1).png")
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon1.png")
     }, function () {
-        $(this).children().children("img").attr("src", "/images/www/simal_logo_05.png")
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/simal_logo_05.png")
         $(this).children(".cebian_Image1").hide();
     })
     $(".cebian_Box li").eq(1).hover(function () {
 
-        $(this).children().children("img").attr("src", "/images/www/icon (6).png")
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon6.png")
     }, function () {
-        $(this).children().children("img").attr("src", "/images/www/simal_logo_08.png")
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/simal_logo_08.png")
         $(this).children(".cebian_Image1").hide();
     })
     $(".cebian_Box li").eq(2).hover(function () {
-        $(this).children().children("img").attr("src", "/images/www/icon (7).png");
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon7.png");
     }, function () {
-        $(this).children().children("img").attr("src", "/images/www/simal_logo_17.png");
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/simal_logo_17.png");
         $(this).children(".cebian_Image1").hide();
     })
     $(".cebian_Box li").eq(3).hover(function () {
-        $(this).children().children("img").attr("src", "/images/www/icon (3).png")
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon3.png")
     }, function () {
-        $(this).children().children("img").attr("src", "/images/www/simal_logo_16.png")
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/simal_logo_16.png")
         $(this).children(".cebian_Image1").hide();
     })
-    $(".cebian_Box li").eq(4).hover(function () {
-        $(this).children().children("img").attr("src", "/images/www/ZXGT_icon_Green.png")
-    }, function () {
-        $(this).children().children("img").attr("src", "/images/www/ZXGT_icon.png")
-        $(this).children(".cebian_Image1").hide();
-    })
+ 
     $(".cebian_Box li").eq(5).hover(function () {
-        $(this).children().children("img").attr("src", "/images/www/icon (2).png")
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/icon2.png")
     }, function () {
-        $(this).children().children("img").attr("src", "/images/www/end_03.png");
+        $(this).children().children("img").attr("src", "/themes/simpleboot3/public/assets/images/end_03.png");
     })
     loadGg();
     setInterval(LoadDjs, 1000);
 
 
-$.getJSON("/ajax/GetCityByIP.ashx", { dt: new Date().getTime() }, function (data) {
-    if (data.code == 0) {
-        if (data.region == data.city) {
-            $("#span_city").text(data.city);
-        } else {
-            $("#span_city").text(data.region + '-' + data.city);
-        }
-    } else {
+$.getJSON("GetCityByIP.ashx", { dt: new Date().getTime() }, function (data) {
+
         $("#span_city").text("北京市");
-    }
+    
 });
 
 
