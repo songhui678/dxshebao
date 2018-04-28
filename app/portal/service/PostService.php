@@ -217,7 +217,7 @@ class PostService {
 
 		return $page;
 	}
-	public function publishedAll() {
+	public function publishedAll($category = 0) {
 
 		$where = [
 			'post_type' => 1,
@@ -225,8 +225,19 @@ class PostService {
 			'post_status' => 1,
 			'delete_time' => 0,
 		];
+		$join = [];
+		$field = '*';
+		if (!empty($category)) {
+			$where['b.category_id'] = ['eq', $category];
+			array_push($join, [
+				'__PORTAL_CATEGORY_POST__ b', 'a.id = b.post_id',
+			]);
+			$field = 'a.*,b.id AS post_category_id,b.list_order,b.category_id';
+		}
+
 		$portalPostModel = new PortalPostModel();
-		$articles = $portalPostModel->alias('a')->field('*')
+		$articles = $portalPostModel->alias('a')->field($field)
+			->join($join)
 			->where($where)
 			->order('update_time', 'DESC')
 			->paginate(10);

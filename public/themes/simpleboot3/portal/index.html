@@ -170,54 +170,38 @@
                 <div class="tab1">
 <ul class="menu">
 <div class="line"></div>
-<li class="active"><a href="http://www.rrb365.com/shebaochangshi/6"> 社保热点</a></li>
-<li><a href="http://www.rrb365.com/shebaochangshi/15"> 社保新闻</a></li>
-<li><a href="http://www.rrb365.com/shebaochangshi/7"> 政策资讯</a></li>
+<li class="active"><a href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>2))}"> 社保政策</a></li>
+ 
 </ul>
 <div class="lists con1">
-<ul>
-<li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180423173046.html" target="_blank">人社部签发首张全国统一的电子社保卡</a><span>2018-04-23</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180423180929.html" target="_blank">上海养老金上调最新消息</a><span>2018-04-23</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180418152238.html" target="_blank">青岛9种特效药纳入医保救助范围</a><span>2018-04-18</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180417143048.html" target="_blank">五险一金将发生5大变化 每个都与利益有关</a><span>2018-04-17</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180416151802.html" target="_blank">个人税延养老险试点5月1日起实施</a><span>2018-04-16</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180413131653.html" target="_blank">北京：城乡居民养老保险缴费启动</a><span>2018-04-13</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180402142040.html" target="_blank">深圳将人工耳蜗纳入社会医疗保险支付范围</a><span>2018-04-02</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180330150509.html" target="_blank">今年国资划转社保试点有望提速</a><span>2018-03-30</span></li>
-</ul>
-<a href="http://www.rrb365.com/shebaochangshi/6" class="titlemore">更多</a>
+    <ul>
+    <foreach name="shebaoData" item="shebao">    
+        <li><b style="float:left;">•&nbsp;&nbsp;</b><a href="{:cmf_url('portal/shebaochangshi/article',array('id'=>$shebao['id']))}" target="_blank">{$shebao.post_title}</a><span>{:date('Y-m-d',$shebao.published_time)}</span>
+        </li>
+    </foreach>
+    </ul>
+    <a href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>2))}" class="titlemore">更多</a>
 </div>
-<div class="lists con2">
-<ul>
-<li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180420145052.html" target="_blank">铁岭企业退休人员领取养老金资格认证</a><span>2018-04-20</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180419155852.html" target="_blank">北京首批积分落户申报 不需要提交社保缴费证明</a><span>2018-04-19</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180419163902.html" target="_blank">泉州社保补贴申请、申领时间截至5月30日</a><span>2018-04-19</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180418151641.html" target="_blank">芜湖将为特殊困难群体代缴养老保险费</a><span>2018-04-18</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180417152157.html" target="_blank">南京医保支付将推行“按病种付费”</a><span>2018-04-17</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180416142509.html" target="_blank">湖南省职工养老保险缴费申报核定工作启动</a><span>2018-04-16</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180412150954.html" target="_blank">山东省建筑业农民工按项目纳入工伤保险</a><span>2018-04-12</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180410143730.html" target="_blank">烟台开发区居民养老保险缴费工作启动</a><span>2018-04-10</span></li>
-</ul>
-<a href="http://www.rrb365.com/shebaochangshi/15" class="titlemore">更多</a>
-</div>
-<div class="lists con3">
-<ul>
-<li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180420150034.html" target="_blank">长春市调整城镇居民基本医疗保险缴费标准</a><span>2018-04-20</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180420151805.html" target="_blank">江西将门诊费等多项费用纳入医保</a><span>2018-04-20</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180420155319.html" target="_blank">厦门城乡居民养老保险政策性补缴新规</a><span>2018-04-20</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180419155319.html" target="_blank">温州住房公积金政策调整</a><span>2018-04-19</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180418151525.html" target="_blank">唐山离退休人员养老金领取资格认证消息</a><span>2018-04-18</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180417152541.html" target="_blank">连云港药企31品种进入新版省医保目录</a><span>2018-04-17</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180416151647.html" target="_blank">多地社保缴费基数上调普超6%</a><span>2018-04-16</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180412153351.html" target="_blank">山东住房公积金平台将于10月底前上线</a><span>2018-04-12</span></li>
-</ul>
-<a href="http://www.rrb365.com/shebaochangshi/7" class="titlemore">更多</a>
-</div>
+ 
+ 
 </div>
 <div class="tab2" style="margin-left:35px;">
 <ul class="menu">
 <div class="line"></div>
-<li class="active"><a href="http://www.rrb365.com/shebaochangshi/4"> 常见问答</a></li>
-<li><a href="http://www.rrb365.com/shebaochangshi/5"> 社保知识</a></li>
-<li><a href="http://www.rrb365.com/shebaochangshi/39"> 公积金知识</a></li>
+<li class="active"><a href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>3))}"> 公积金政策</a></li>
+ 
 </ul>
 <div class="lists con1">
-<ul>
-<li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180419161414.html" target="_blank">试用期单位不交社保怎么办</a><span>2018-04-19</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180417141743.html" target="_blank">公积金贷款买房后辞职 贷款还没还清怎么办</a><span>2018-04-17</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180403152116.html" target="_blank">南平医保问题：居民使用新农合能否续缴职工医保</a><span>2018-04-03</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180328172133.html" target="_blank">石家庄城镇职工基本养老保险全面解读</a><span>2018-03-28</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180323165931.html" target="_blank">停缴缓缴社保“套路”多要理直气壮说不</a><span>2018-03-23</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180323172603.html" target="_blank">2018养老保险新政策  哪三类人可以一次补缴福利待遇</a><span>2018-03-23</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180322150637.html" target="_blank">2018年生育保险能报多少钱 生育保险能报销哪些</a><span>2018-03-22</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180321150254.html" target="_blank">社保省内可以转移吗 社保转移知识</a><span>2018-03-21</span></li>
-</ul>
-<a href="http://www.rrb365.com/shebaochangshi/4" class="titlemore">更多</a>
+    <ul>
+    <foreach name="gjjData" item="gjj">    
+        <li><b style="float:left;">•&nbsp;&nbsp;</b><a href="{:cmf_url('portal/shebaochangshi/article',array('id'=>$gjj['id']))}" target="_blank">{$gjj.post_title}</a><span>{:date('Y-m-d',$gjj.published_time)}</span>
+        </li>
+    </foreach>
+    </ul>
+    <a href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>3))}" class="titlemore">更多</a>
 </div>
-<div class="lists con2">
-<ul>
-<li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180423150939.html" target="_blank">上海个人交社保怎么办理</a><span>2018-04-23</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180420150216.html" target="_blank">深圳医保异地就医报销对象及报销范围</a><span>2018-04-20</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180420150804.html" target="_blank">住院后医保怎么报销</a><span>2018-04-20</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180420162750.html" target="_blank">上海公积金代缴靠不靠谱</a><span>2018-04-20</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180419151545.html" target="_blank">上海社保断交怎么补交？</a><span>2018-04-19</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180419152204.html" target="_blank">社保里的钱可以取出来吗</a><span>2018-04-19</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180418142026.html" target="_blank">上海公积金代缴企业如何选择</a><span>2018-04-18</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180418143016.html" target="_blank">外来人口怎么交社保</a><span>2018-04-18</span></li>
-</ul>
-<a href="http://www.rrb365.com/shebaochangshi/5" class="titlemore">更多</a>
-</div>
-<div class="lists con3">
-<ul>
-<li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180423181406.html" target="_blank">住房公积金贷款上限是多少</a><span>2018-04-23</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180418151002.html" target="_blank">五险一金知识 一定要牢记</a><span>2018-04-18</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180417141510.html" target="_blank">住房公积金销户提取条件是什么</a><span>2018-04-17</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180416152844.html" target="_blank">缴存住房公积金的注意事项有哪些</a><span>2018-04-16</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180409161621.html" target="_blank">公积金账户注销后还能办理吗 需满足什么条件</a><span>2018-04-09</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180408124940.html" target="_blank">政策解读：住房公积金提取最新政策</a><span>2018-04-08</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180404161354.html" target="_blank">住房公积金贷款买房需要注意哪些细节</a><span>2018-04-04</span></li><li><b style="float:left;">•&nbsp;&nbsp;</b><a href="/news/20180402152318.html" target="_blank">公积金可以个人交吗 代缴个人社保公积金</a><span>2018-04-02</span></li>
-</ul>
-<a href="http://www.rrb365.com/shebaochangshi/39" class="titlemore">更多</a>
-</div>
+ 
+ 
 </div>
 
             </div>  

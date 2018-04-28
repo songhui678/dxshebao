@@ -10,10 +10,15 @@
 <div style="width: 1000px; margin: 0 auto; overflow: hidden">
 <div class="sbcs_L">
     <dl class="sbcs_dl">
-        <dt data-value="1">
-        <a  href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>$category['id']))}">{$category.name}
-        </a>
-        </dd>
+        <?php foreach ($categoryTree as $fuCate) {?>
+        <dt data-value="<?=$fuCate['id']?>" class="sbcs_Image">
+            <a href="javascript:;" style="color: white;"><?=$fuCate['name']?></a>
+        </dt>
+            <?php foreach ($fuCate['_child'] as  $erji) {?>
+            <dd data-value="<?=$erji['id']?>" parent-value="<?=$fuCate['id']?>" style="display: block;">
+                <a href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>$erji['id']))}" style="color: black;"><?=$erji['name']?></a>
+            </dd>
+        <?php }}?>    
     </dl>
 
     <script>
@@ -47,24 +52,11 @@
             <p class="Seat">当前位置：<a href="/">{$site_info.site_name}</a> >><a href="{:cmf_url('/portal/shebaochangshi/index',array('id'=>$category['id']))}">{$category.name}</a>
             <hr color="#f1f1f1" style="margin-top: 10px">
             <div class="search_Box" id="searchList" data-value="48">
-            <php>
-                $where=[
-                'post.create_time'=>['egt',0]
-                ];
-                $page=[
-                    'list_rows'=>10,
-                    'next'=>'下一页',
-                    'prev'=>'上一页'
-                ];
-            </php>
-            <portal:articles item="article" where="$where" order="post.create_time DESC" page="$page"  
-                        relation="categories" 
-                        categoryIds="$category.id"        
-                        returnVarName="articles_data">
+            <foreach name="articles" item="article">
          
                 <div class="search_Box1">
                     <div class="search_top">
-                        <h4><a href="{:cmf_url('portal/Article/index',array('id'=>$article['id'],'cid'=>$category['id']))}" target="_blank">{$article.post_title}</a>
+                        <h4><a href="{:cmf_url('portal/shebaochangshi/article',array('id'=>$article['id']))}" target="_blank">{$article.post_title}</a>
                         </h4>
                         <p>{:date('Y-m-d',$article.published_time)}</p>
                     </div>
@@ -72,12 +64,12 @@
                         {$article.post_excerpt}
                     </p>
                 </div>
-            </portal:articles>
+            </foreach>
  
         </div>
         <div class="page_news">
             <!--共有 <span class="ui_txt_bold04">22</span> 条记录-->
-            <page/>
+            {$page|default=''}
         </div>
         </div>
     </div>

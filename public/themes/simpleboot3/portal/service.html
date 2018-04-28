@@ -1,4 +1,11 @@
 <include file="public@head"/>
+<taglib name="app\portal\taglib\Portal"/>
+<php>
+    $top_slide_id=empty($theme_vars['top_slide'])?1:$theme_vars['top_slide'];
+</php>
+<slides id="$top_slide_id">
+<a href="{$vo.url|default=''}"><img src="{:cmf_get_image_url($vo.image)}" width="100%" alt=""></a>
+</slides>
 <!--<link href="__TMPL__/public/assets/css/public.css" rel="stylesheet" />-->
 <link href="__TMPL__/public/assets/css/service.css" rel="stylesheet" />
 <div class="content w">
@@ -44,7 +51,7 @@
                 </li>
             </ul>
         </div>
-        <div class="btn theme-click">立即咨询</div>
+        <div class="btn theme-click" onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=2454850937&Site=在线咨询&Menu=yes')">立即咨询</div>
     </div>
 </div>
 <div class="youshi_box">
@@ -84,7 +91,7 @@
 
         </div>
     </div>
-    <div class="btn theme-click" style="margin-bottom: 30px;">立即咨询</div>
+    <div class="btn theme-click" style="margin-bottom: 30px;" onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=2454850937&Site=在线咨询&Menu=yes')">立即咨询</div>
 </div>
 <div>
  

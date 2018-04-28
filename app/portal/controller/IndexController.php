@@ -10,10 +10,18 @@
 // +----------------------------------------------------------------------
 namespace app\portal\controller;
 
+use app\portal\service\PostService;
 use cmf\controller\HomeBaseController;
 
 class IndexController extends HomeBaseController {
 	public function index() {
+
+		$postService = new PostService();
+
+		$shebaoData = $postService->publishedAll(2);
+		$gjjData = $postService->publishedAll(3);
+		$this->assign('shebaoData', $shebaoData->items());
+		$this->assign('gjjData', $gjjData->items());
 		// return $this->display($content);
 		return $this->fetch(':index');
 	}
