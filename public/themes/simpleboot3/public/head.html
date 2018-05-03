@@ -1,40 +1,9 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<link href="__TMPL__/public/assets/css/css.css" rel="stylesheet" />
+ <link href="__TMPL__/public/assets/css/css.css" rel="stylesheet" />
 <link href="__TMPL__/public/assets/css/common.css" rel="stylesheet" />
 <script src="__TMPL__/public/assets/js/jquery-1.4.4.min.js"></script>
 <script src="__TMPL__/public/assets/js/common.js"></script>
 <script src="__TMPL__/public/assets/js/gundong.js"></script>
 <script src="__TMPL__/public/assets/js/Customer.js"></script>
-<title>
-    {$site_info.site_seo_title|default=''}-{$site_info.site_name}
-</title>
-    <script>
-        function qiehuan(num) {
-            for (var id = 0; id <= 3; id++) {
-                if (id == num) {
-                    document.getElementById("qh_con" + id).style.display = "block";
-                    document.getElementById("mynav" + id).className = "feiyong_yuan feiyong_yuan1";
-                    document.getElementById("Money" + id).className = "feiyong_fang feiyong_fang1";
-                }
-                else {
-                    document.getElementById("qh_con" + id).style.display = "none";
-                    document.getElementById("mynav" + id).className = "feiyong_yuan";
-                    document.getElementById("Money" + id).className = "feiyong_fang";
-                }
-            }
-        }
-    </script>
-<meta name="description" content="{$site_info.site_seo_description|default=''}" /><meta name="keywords" content="{$site_info.site_seo_keywords|default=''}" /></head>
-<body>
-    <!--[if IE 6]>
-    <script src="/js/DD_belatedPNG.js"></script>
-    <script type="text/javascript">
-    DD_belatedPNG.fix(' .daifa_qiye,.daifa_L,.daifa_L1,.rrb1_header_R1,.rrb1_header_R2,.rrb1_header_R3,.logo,.rrb1_yuan2');
-    </script>
-<![endif]-->
 <link href="__TMPL__/public/assets/css/top.css" rel="stylesheet" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <link href="__TMPL__/public/assets/css/font.css" rel="stylesheet" />
@@ -42,8 +11,16 @@
 <script src="__TMPL__/public/assets/js/functions.js"></script>
 <script src="__TMPL__/public/assets/js/index.js" content="charset=utf-8"></script>
 <script src="__TMPL__/public/assets/js/footer.js" content="charset=utf-8"></script>
-<div id="divTopZw"></div>
 <script src="__TMPL__/public/assets/js/enterprisecustomized.js"></script>
+</head>
+<body>
+    <!--[if IE 6]>
+    <script src="/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">
+    DD_belatedPNG.fix(' .daifa_qiye,.daifa_L,.daifa_L1,.rrb1_header_R1,.rrb1_header_R2,.rrb1_header_R3,.logo,.rrb1_yuan2');
+    </script>
+<![endif]-->
+<div id="divTopZw"></div>
 <!--操作指引start-->
 <div class="theme-popbod">
     <div class="theme-poptit">

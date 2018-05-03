@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>{$page.post_title|default=''}-{$site_info.site_name}</title>
+<meta name="description" content="{$site_info.site_seo_description|default=''}" />
+<meta name="keywords" content="{$site_info.site_seo_keywords|default=''}" />
 <include file="public@head"/>
 <taglib name="app\portal\taglib\Portal"/>
 <php>
@@ -7,7 +15,7 @@
 <a href="{$vo.url|default=''}"><img src="{:cmf_get_image_url($vo.image)}" width="100%" alt=""></a>
 </slides>
 <div style="width: 1000px; margin: 0 auto; overflow: hidden">
-        <p class="Seat">当前位置：{$site_info.site_name}>>关于我们</p>
+        <p class="Seat">当前位置：{$site_info.site_name}>>{$page.post_title|default=''}</p>
         <div class="ddgl_Left">
         <div class="about_nav">
             <a class="activecolor  about_nav1" href="{:cmf_url('/portal/about/index/id/1')}">关于我们</a>
