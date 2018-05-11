@@ -6,18 +6,24 @@
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: Dean <zxxjjforever@163.com>
+// | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
+namespace app\portal\controller;
 
-$runtimeRoutes = [
-	'jiaoshebao' => 'portal/jiaoshebao/index',
-	'jiaogongjijin' => 'portal/jiaogongjijin/index',
-	'about' => 'portal/about/index',
-	'contact' => 'portal/contact/index',
-	'service' => 'portal/service/index',
-	'shebaochangshi' => 'portal/shebaochangshi/index',
-	'article/:id' => 'portal/shebaochangshi/article',
+use app\portal\service\PostService;
+use cmf\controller\HomeBaseController;
 
-];
+class ContactController extends HomeBaseController {
+	public function index() {
+		$postService = new PostService();
+		$page = $postService->publishedPage(2);
+		if (empty($page)) {
+			abort(404, ' 页面不存在!');
+		}
 
-return $runtimeRoutes;
+		$this->assign('page', $page);
+		// $more = $page['more'];
+		// $tplName = empty($more['template']) ? 'page' : $more['template'];
+		return $this->fetch(':about');
+	}
+}
