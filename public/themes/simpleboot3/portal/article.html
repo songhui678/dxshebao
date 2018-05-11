@@ -37,7 +37,7 @@
                             <a href="javascript:void(0);">上一篇：已经是首篇</a>  
                         <?php }else{?>
                             <a href="{:cmf_url('portal/shebaochangshi/article',array('id'=>$prev_article['id']))}">上一篇： 
-                                    <?php echo truncate_utf8_string($prev_article->post_title,8); ?>
+                                    <?php echo truncate_utf8_string($prev_article->post_title,12); ?>
                             </a>  
                         <?php }?>
                         |  
@@ -45,7 +45,7 @@
                             <a href="javascript:void(0);">下一篇：已经是末篇</a>  
                         <?php }else{?>
                             <a href="{:cmf_url('portal/shebaochangshi/article',array('id'=>$next_article['id']))}">下一篇：
-                            <?php echo truncate_utf8_string($next_article->post_title,8); ?>    
+                            <?php echo truncate_utf8_string($next_article->post_title,12); ?>    
                             </a>  
                         <?php }?>
                 </p>
